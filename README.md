@@ -6,7 +6,7 @@ If you want to edit and see your changes automatically in your VSCode. I highly 
 
 1. Yaml: Extensions from RedHat that allows you to edit yml.files
 https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-2. OpenAPI(Swagger) Editor: This extensions allows you to render to see your documentation and explore its content in a dynamic way
+2. OpenAPI(Swagger) Editor: This extensions allows you to render your documentation and explore its content in a dynamic way
 https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi
 
 If you want to see your changes in real time, you have to press Ctrl(Cmd)+Shift+P and type OpenAPI: show preview using Swagger UI
