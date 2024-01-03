@@ -40,9 +40,18 @@ servers:
         default: "8443"
       version:
         default: v1
+tags:
+  - name: Categories
+    description: Categories related Operations
+  - name: Products
+    description: Products related Operations
+  - name: Orders
+    description: Orders related Operations 
 paths:
   /categories:
     get:
+      tags:
+        - Categories
       summary: List all categories
       description: Returns the list of categories supported by Eazyshop
       parameters:
@@ -95,6 +104,8 @@ paths:
                       name: Mobiles        
   /categories/{categoryId}:
     get:
+      tags:
+        - Categories
       summary: Return category details
       description: returns the category details from Eazyshop
       parameters:
@@ -120,6 +131,8 @@ paths:
                     type: string
   /products:
     get:
+      tags:
+        - Products
       summary: List all products
       description: |
         Return the list of products supported by EazyShop
@@ -174,6 +187,8 @@ paths:
                       quantity: 67
   /products/{productId}:
     get:
+      tags:
+        - Products
       summary: Return product details
       description: |
         Returns the product details from EazyShop
@@ -208,6 +223,8 @@ paths:
                       ***Quantity*** represents `stock` value when this field is being sent by EazyShop. Where as in the scenarios of consumer sending this field, it represents `number of products items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
   /orders:
     post:
+      tags:
+        - Orders
       summary: Create Order
       description: |
         Post order details to EazyShop for processing and shipping
@@ -254,6 +271,8 @@ paths:
                   orderId:
                     type: integer
     put:
+      tags:
+        - Orders
       summary: Update Order
       description: |
         Update order details to EazyShop for processing and shipping
@@ -297,6 +316,8 @@ paths:
         '200':
           description: Order details updated successfully
     delete:
+      tags:
+        - Orders
       summary: Update Order
       description: |
         Update order details to EazyShop for processing and shipping
@@ -310,6 +331,8 @@ paths:
         '204':
           description: Order details cancelled successfully
     get:
+      tags:
+        - Orders
       summary: Get Order details
       description: Get order details from EazyShop
       parameters:
