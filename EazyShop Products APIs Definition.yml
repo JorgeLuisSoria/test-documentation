@@ -301,8 +301,15 @@ components:
           type: string
         state:
           type: string
+          enum:
+            - California
+            - Texas
+            - Indiana
+            - NewYork
         zipcode:
           type: string
+        isOfficeAddress:
+          type: boolean
       required: [addressLine, city, state, zipcode]
     Product:
       type: object
@@ -313,8 +320,14 @@ components:
           type: string
         price:
           type: number
+          format: float
         categoryName:
           type: string
+          nullable: true
+        releaseDate:
+          type: string
+          format: date
+          readOnly: true
         quantity:
           type: integer
           description: |
